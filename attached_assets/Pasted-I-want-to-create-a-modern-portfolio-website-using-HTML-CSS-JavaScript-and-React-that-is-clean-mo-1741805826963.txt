@@ -32,7 +32,7 @@ Software Testing & Troubleshooting – Developed test cases to enhance software 
 Cross-Functional Collaboration – Worked with diverse teams to improve network efficiency and service quality.
 5. Projects:
 GenHack Hackathon – 4th Place | Gen AI Medical Chatbot (Feb 2024)
-Built an AI-powered medical chatbot using Hugging Face’s NLP models.
+Built an AI-powered medical chatbot using open-source NLP models.
 Implemented sentiment analysis & intent recognition for accurate responses.
 Developed a full-stack solution using FastAPI (backend), React (frontend), and AWS Lambda (deployment).
 Ranked 4th out of 100+ teams in the GenHack AI Hackathon (ISA-VIT Organized).

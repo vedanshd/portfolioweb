@@ -1,27 +1,27 @@
+// This file contains the implementation for the Gemini AI integration
 import { GoogleGenerativeAI } from "@google/generative-ai";
-
-// the newest Gemini model is "gemini-1.5-pro" which is highly capable and efficient
-const gemini = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
 
 // This function will generate a response from Gemini AI based on the resume content and user query
 export async function generateChatResponse(query: string, resumeContent: string): Promise<string> {
   try {
-    console.log("API Key loaded:", process.env.GEMINI_API_KEY ? `${process.env.GEMINI_API_KEY.substring(0, 10)}..." : "NOT SET");
+    const apiKey = process.env.GEMINI_API_KEY;
+    console.log("API Key loaded:", apiKey ? `${apiKey.substring(0, 10)}...` : "NOT SET");
     
-    if (!process.env.GEMINI_API_KEY || process.env.GEMINI_API_KEY.trim() === '') {
+    if (!apiKey || apiKey.trim() === '') {
       console.log("Gemini API key not configured, returning fallback message");
       return "I'm sorry, the AI chat service is not currently configured. Please use the contact form to reach out directly.";
     }
 
-    const model = gemini.getGenerativeModel({ 
-      model: "gemini-1.5-pro",
+    // Initialize Gemini client with API key
+    const gemini = new GoogleGenerativeAI(apiKey);
+
+    const model = gemini.getGenerativeModel({
+      model: "gemini-2.5-flash-lite-preview-06-17",
       generationConfig: {
         temperature: 0.7,
         maxOutputTokens: 500,
       },
-    });
-
-    const prompt = `You are a helpful and friendly AI assistant for Vedansh Dhawan's portfolio website. You can:
+    });    const prompt = `You are a helpful and friendly AI assistant for Vedansh Dhawan's portfolio website. You can:
 
 1. **Answer questions about Vedansh** using the resume information below
 2. **Handle general conversation** like greetings, thanks, how are you, etc.
@@ -33,13 +33,6 @@ ${resumeContent}
 User Question: ${query}
 
 Instructions:
-- Be friendly and conversational for greetings (hi, hello, how are you, thanks, etc.)
-- For resume-related questions, use the information provided above
-- For questions not in the resume, politely redirect to topics you can help with
-- Keep responses concise but engaging (under 150 words)
-- Use emojis sparingly for a friendly tone
-- Format with markdown when helpful
-- If someone greets you, greet back and mention you can help them learn about Vedansh
 
 Respond naturally to the user's question.`;
 

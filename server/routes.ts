@@ -60,8 +60,8 @@ Software Intern (May 2024 – Jul 2024)
 
 Projects:
 GenHack Hackathon – 4th Place, Gen AI Medical Chatbot (Feb 2024)
-Technologies: Hugging Face, OpenAI, FastAPI, React, AWS Lambda
-- Development: Developed an AI-powered medical chatbot using Hugging Face's NLP models
+Technologies: OpenAI, FastAPI, React, AWS Lambda
+- Development: Developed an AI-powered medical chatbot using open-source NLP models
 - NLP Implementation: Implemented sentiment analysis & intent recognition for accurate medical responses
 - Full-Stack Integration: Integrated FastAPI backend with a React-based frontend, hosted on AWS Lambda
 - Achievement: Secured 4th place out of 100+ teams in GenHack, an ISA-VIT organized Gen AI Hackathon
@@ -151,27 +151,21 @@ Honors & Awards:
   return httpServer;
 }
 
-// Using local Q&A system (Gemini temporarily disabled due to API issues)
+// Using Gemini AI with fallback to local Q&A
 async function generateChatResponse(message: string, resumeContent: string): Promise<string> {
-  console.log("Using local Q&A system");
-  return await generateLocalResponse(message, resumeContent);
-  
-  // Uncomment below to re-enable Gemini when API issues are resolved:
-  /*
+  // Try Gemini first
   try {
+    console.log('Attempting Gemini response');
     const geminiResponse = await generateGeminiResponse(message, resumeContent);
-    
-    if (geminiResponse.includes("Sorry, I encountered an error") || 
-        geminiResponse.includes("AI service is not currently configured") ||
-        geminiResponse.includes("AI service configuration")) {
-      console.log("Gemini failed, falling back to local Q&A");
-      return await generateLocalResponse(message, resumeContent);
+
+    if (geminiResponse && !geminiResponse.includes('AI chat service is not currently configured') && !geminiResponse.includes('Sorry, I encountered an error')) {
+      return geminiResponse;
     }
-    
-    return geminiResponse;
-  } catch (error) {
-    console.log("Gemini API error, falling back to local Q&A:", error);
-    return await generateLocalResponse(message, resumeContent);
+    console.log('Gemini did not return a valid response, falling back to local QA');
+  } catch (gErr) {
+    console.log('Gemini API error, falling back to local QA:', gErr);
   }
-  */
+
+  console.log('Using local Q&A system');
+  return await generateLocalResponse(message, resumeContent);
 }

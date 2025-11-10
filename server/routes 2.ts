@@ -69,8 +69,8 @@ Software Intern (May 2024 – Jul 2024)
 
 Projects:
 GenHack Hackathon – 4th Place, Gen AI Medical Chatbot (Feb 2024)
-Technologies: Hugging Face, OpenAI, FastAPI, React, AWS Lambda
-- Development: Developed an AI-powered medical chatbot using Hugging Face's NLP models
+Technologies: OpenAI, FastAPI, React, AWS Lambda
+- Development: Developed an AI-powered medical chatbot using open-source NLP models
 - NLP Implementation: Implemented sentiment analysis & intent recognition for accurate medical responses
 - Full-Stack Integration: Integrated FastAPI backend with a React-based frontend, hosted on AWS Lambda
 - Achievement: Secured 4th place out of 100+ teams in GenHack, an ISA-VIT organized Gen AI Hackathon

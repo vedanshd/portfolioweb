@@ -163,11 +163,11 @@ My core technical skills include Python, Java, JavaScript, and C++ programming l
       ],
       responseFormatter: (content) => {
         const projectsSection = extractSection(content, 'Projects:', 'Skills:');
-        return `## Projects
+  return `## Projects
 
 ${projectsSection}
 
-I participated in the GenHack Hackathon and secured 4th place out of 100+ teams by developing an AI-powered medical chatbot using Hugging Face's NLP models, with a FastAPI backend and React frontend, hosted on AWS Lambda.`;
+I participated in the GenHack Hackathon and secured 4th place out of 100+ teams by developing an AI-powered medical chatbot using open-source NLP models, with a FastAPI backend and React frontend, hosted on AWS Lambda.`;
       }
     },
     contact: {

@@ -6,7 +6,7 @@ export function Projects() {
     name: "GenHack Hackathon – 4th Place | Gen AI Medical Chatbot",
     date: "Feb 2024",
     details: [
-      "Built an AI-powered medical chatbot using Hugging Face's NLP models",
+      "Built an AI-powered medical chatbot using open-source NLP models",
       "Implemented sentiment analysis & intent recognition for accurate responses",
       "Developed a full-stack solution using FastAPI (backend), React (frontend), and AWS Lambda (deployment)",
       "Ranked 4th out of 100+ teams in the GenHack AI Hackathon (ISA-VIT Organized)"
