@@ -1,5 +1,7 @@
 # Dependencies
 node_modules
+.DS_Store
+.dist
 dist
 .DS_Store
 server/public
