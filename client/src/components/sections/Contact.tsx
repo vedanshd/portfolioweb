@@ -126,7 +126,7 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="font-medium text-gray-900 dark:text-white">Location</p>
-                    <span className="text-gray-600 dark:text-gray-300">Vellore, Tamil Nadu, India</span>
+                    <span className="text-gray-600 dark:text-gray-300">Gurgaon, Haryana, India</span>
                   </div>
                 </div>
               </div>
