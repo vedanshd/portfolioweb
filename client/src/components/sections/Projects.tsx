@@ -6,7 +6,7 @@ export function Projects() {
     {
       name: "Personal Portfolio Website",
       date: "2024",
-      technologies: "React, TypeScript, Tailwind CSS, Express.js, PostgreSQL, OpenAI API, Framer Motion",
+      technologies: "React, TypeScript, Tailwind CSS, Express.js, PostgreSQL, Framer Motion",
       details: [
         "Voice navigation system for enhanced accessibility",
         "Dark/light theme toggle with smooth transitions",
@@ -17,7 +17,7 @@ export function Projects() {
       ]
     },
     {
-      name: "VDreamScape – AI-Powered Dream Analysis App", 
+      name: "VDreamScape – AI-Powered Dream Analysis App",
       date: "2024",
       technologies: "Full-stack development with AI integration",
       details: [
@@ -25,8 +25,30 @@ export function Projects() {
         "Advanced symbol analysis and psychological narrative generation",
         "Interactive reflection prompts for deeper self-understanding",
         "Responsive UI design with seamless light/dark theme switching",
-        "Integrated OpenAI API with intelligent fallback mechanisms for graceful degradation",
+        "Integrated robust AI models with intelligent fallback mechanisms",
         "Deployed with optimized performance and user experience"
+      ]
+    },
+    {
+      name: "NLP Research Toolkit",
+      date: "2024",
+      technologies: "Python, PyTorch, Transformers, spaCy, FastAPI",
+      details: [
+        "Built a reusable NLP pipeline for tokenization, NER, and text classification",
+        "Fine-tuned transformer models on domain-specific datasets with PyTorch",
+        "Implemented evaluation metrics, cross-validation, and error analysis",
+        "Packaged as a FastAPI service for inference and model testing"
+      ]
+    },
+    {
+      name: "LinkedIn Profile Analyzer",
+      date: "2024",
+      technologies: "React, TypeScript, Node.js, Puppeteer, NLP",
+      details: [
+        "Extracts and summarizes LinkedIn profile information to generate ATS-friendly summaries",
+        "Analyzes skills and endorsements and suggests improvements to headline and summary",
+        "Provides exportable summaries and keyword optimization suggestions for job applications",
+        "Frontend built with React and backend scraping/processing in Node.js"
       ]
     }
   ];
