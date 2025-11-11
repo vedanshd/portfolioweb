@@ -17,7 +17,7 @@ export function Education() {
     {
       school: "Delhi Public School, Gurgaon",
       period: "2013-2022",
-      degree: "Class 12th: 90% | Class 10th: 98.4%",
+      degree: "Class 12th: 92% | Class 10th: 98.4%",
       details: [
         "School House Captain",
         "Active Member of Model United Nations Society",
