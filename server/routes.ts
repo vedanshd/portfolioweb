@@ -45,7 +45,7 @@ Achievements: Achieved S grade (highest possible) in Basic Electrical Engineerin
 Activities: Core Committee Member of Blockchain Community and VIT Model United Nations Society; Member of Google Developers Student Club and Apple Developers Group
 
 Delhi Public School, Gurgaon
-Class 12th - 90%, Class 10th - 98.4% (Apr 2013 – Apr 2022)
+Class 12th - 92%, Class 10th - 98.4% (Apr 2013 – Apr 2022)
 Achievements: National Topper in Mathematics & IT; Gold Medalist for Academic Excellence
 Activities: 2nd Prize in Photography and Editing Competition; Active participant in Model United Nations (MUN); Leader of the school tech club
 
